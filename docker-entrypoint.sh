@@ -499,10 +499,10 @@ return [
     'interface' => [
         'title' => '${PA_APP_TITLE:-Poweradmin}',
         'base_url' => '${PA_BASE_URL:-}',
-        'language' => '${PA_DEFAULT_LANGUAGE:-en_EN}',
+        'language' => '${PA_DEFAULT_LANGUAGE:-fr_FR}',
         'enabled_languages' => '${PA_ENABLED_LANGUAGES:-cs_CZ,de_DE,en_EN,es_ES,fr_FR,it_IT,ja_JP,lt_LT,nb_NO,nl_NL,pl_PL,pt_PT,ru_RU,tr_TR,zh_CN}',
         'session_timeout' => ${PA_SESSION_TIMEOUT:-1800},
-        'rows_per_page' => ${PA_ROWS_PER_PAGE:-10},
+        'rows_per_page' => ${PA_ROWS_PER_PAGE:-100},
         'theme' => '${PA_THEME:-default}',
         'style' => '${PA_STYLE:-light}',
         'theme_base_path' => '${PA_THEME_BASE_PATH:-templates}',
@@ -543,7 +543,7 @@ return [
         'bind_password' => '${PA_LDAP_BIND_PASSWORD:-}',
     ],
     'misc' => [
-        'timezone' => '${PA_TIMEZONE:-UTC}',
+        'timezone' => '${PA_TIMEZONE:-UTC+1}',
     ],
     'oidc' => [
         'enabled' => ${oidc_enabled},
