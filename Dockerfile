@@ -43,9 +43,7 @@ FROM dunglas/frankenphp:latest-alpine
 # Install required packages and PHP extensions
 RUN apk add --no-cache --virtual .build-deps \
     gettext-dev \
-    postgresql15-dev \
     icu-dev \
-    openldap-dev \
     libxml2-dev \
     && apk add --no-cache \
     icu-data-full \
@@ -57,10 +55,7 @@ RUN apk add --no-cache --virtual .build-deps \
     bash \
     mariadb-client \
     mariadb-connector-c \
-    postgresql15-client \
-    postgresql15-dev \
     libpq \
-    libldap \
     libxml2 \
     && install-php-extensions \
     gettext \
