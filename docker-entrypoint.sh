@@ -893,7 +893,7 @@ main() {
     print_config_summary
 
     rm -rf /app/install
-    log "/app/install supprimé
+    log "/app/install supprimé"
     log "Configuration loaded successfully"
     log "Starting Poweradmin..."
 
