@@ -543,7 +543,7 @@ return [
         'bind_password' => '${PA_LDAP_BIND_PASSWORD:-}',
     ],
     'misc' => [
-        'timezone' => '${PA_TIMEZONE:-UTC+1}',
+        'timezone' => '${PA_TIMEZONE:-Europe/Paris}',
     ],
     'oidc' => [
         'enabled' => ${oidc_enabled},
@@ -811,7 +811,7 @@ print_config_summary() {
         log "Mail Enabled: ${PA_MAIL_ENABLED:-true}"
         log "API Enabled: ${PA_API_ENABLED:-false}"
         log "LDAP Enabled: ${PA_LDAP_ENABLED:-false}"
-        log "Timezone: ${PA_TIMEZONE:-UTC}"
+        log "Timezone: ${PA_TIMEZONE:-Europe/Paris}"
     fi
 
     log "Admin User Creation: ${PA_CREATE_ADMIN:-false}"
