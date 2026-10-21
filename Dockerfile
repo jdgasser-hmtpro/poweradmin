@@ -1,5 +1,4 @@
 # This Dockerfile is intended only for TESTING.
-#
 # Usage:
 #   docker build --no-cache -t poweradmin .
 #   docker run -d --name poweradmin -p 80:80 poweradmin
