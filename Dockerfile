@@ -42,28 +42,11 @@ FROM php:8.3-fpm-alpine
 
 # Install required packages and PHP extensions
 RUN apk add --no-cache --virtual .build-deps \
-    gettext-dev \
-    icu-dev \
-    libxml2-dev \
+    gettext-dev icu-dev libxml2-dev openldap-dev \
     && apk add --no-cache \
-    icu-data-full \
-    icu-libs \
-    gettext \
-    libintl \
-    sqlite \
-    openssl \
-    bash \
-    mariadb-client \
-    mariadb-connector-c \
-    libpq \
-    libxml2 \
-    && install-php-extensions \
-    gettext \
-    intl \
-    ldap \
-    mysqli \
-    pdo_mysql \
-    pdo_pgsql \
+    icu-data-full icu-libs gettext libintl sqlite openssl bash \
+    mariadb-client mariadb-connector-c libpq libxml2 \
+    && docker-php-ext-install gettext intl ldap mysqli pdo_mysql pdo_pgsql \
     && apk del .build-deps \
     && rm -rf /var/cache/apk/*
 
