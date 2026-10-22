@@ -42,7 +42,7 @@ FROM php:8.3-fpm-alpine
 
 # Install required packages and PHP extensions
 RUN apk add --no-cache --virtual .build-deps \
-    gettext-dev icu-dev libxml2-dev openldap-dev \
+    gettext-dev icu-dev libxml2-dev openldap-dev postgresql-dev \
     && apk add --no-cache \
     icu-data-full icu-libs gettext libintl sqlite openssl bash \
     mariadb-client mariadb-connector-c libpq libxml2 \
