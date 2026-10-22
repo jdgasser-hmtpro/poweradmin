@@ -38,7 +38,7 @@
 #     -e PA_ADMIN_PASSWORD=your-secure-password \
 #     poweradmin
 
-FROM alpine:latest
+FROM php:8.3-fpm-alpine
 
 # Install required packages and PHP extensions
 RUN apk add --no-cache --virtual .build-deps \
