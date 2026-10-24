@@ -898,6 +898,7 @@ main() {
     log "Starting Poweradmin..."
 
     # Execute the command
+    php-fpm -D || exit 1
     exec "$@"
 }
 
