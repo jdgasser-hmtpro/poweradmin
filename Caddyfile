@@ -6,13 +6,21 @@
     root * /app
     encode gzip
 
-    @denied path /config* /lib* /tests* /vendor*
+        @denied path /config* /lib* /tests* /vendor*
     @bootstrap path /vendor/twbs/bootstrap* /vendor/twbs/bootstrap-icons*
-    handle @bootstrap { file_server }
-    handle @denied { respond "Forbidden" 403 }
+
+    handle @bootstrap {
+        file_server
+    }
+
+    handle @denied {
+        respond "Forbidden" 403
+    }
 
     @hidden path .* *.sql *.md *.log *.yaml *.yml
-    handle @hidden { respond "Forbidden" 403 }
+    handle @hidden {
+        respond "Forbidden" 403
+    }
 
     @static path *.js *.css *.png *.jpg *.jpeg *.gif *.ico *.svg *.woff *.woff2 *.ttf *.eot
     handle @static {
