@@ -14,6 +14,7 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh \
     && mkdir -p /db /app/config /data/caddy /config/caddy \
     && chown -R www-data:www-data /app /db /data/caddy /config/caddy
 
+
 USER www-data
 EXPOSE 80
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
